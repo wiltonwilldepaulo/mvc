@@ -1,18 +1,15 @@
 <?php
 
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
 
-require __DIR__ . '/../vendor/autoload.php';
-
+require "../vendor/autoload.php";
 $app = AppFactory::create();
-
 $app->addRoutingMiddleware();
+define("BASE_URL", $app->getBasePath());
 
-$errorMiddleware = $app->addErrorMiddleware(true, true, true);
-
-require '../app/routers/router.php';
-
-// Run app
+//INCLUIMOS AS CONFIGURAÇÕES
+require "../app/helpers/config.php";
+//INCLUIMOS TODAS AS ROTAS.
+require "../app/routes/site.php";
+//RUM APP
 $app->run();

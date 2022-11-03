@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit0e330a870fc412f4adf1ce858bebcb9f
+class ComposerStaticInit18fa088d68fd954b4ea5726a594f6291
 {
     public static $files = array (
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
@@ -439,14 +439,25 @@ class ComposerStaticInit0e330a870fc412f4adf1ce858bebcb9f
         'Twig\\Util\\TemplateDirIterator' => __DIR__ . '/..' . '/twig/twig/src/Util/TemplateDirIterator.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+        'app\\controllers\\ControllerCliente' => __DIR__ . '/../..' . '/app/controllers/ControllerCliente.php',
+        'app\\controllers\\Middlewares' => __DIR__ . '/../..' . '/app/controllers/Middlewares.php',
+        'app\\database\\Connection' => __DIR__ . '/../..' . '/app/database/Connection.php',
+        'app\\database\\models\\BaseDB' => __DIR__ . '/../..' . '/app/database/models/BaseDB.php',
+        'app\\database\\models\\Cliente' => __DIR__ . '/../..' . '/app/database/models/Cliente.php',
+        'app\\database\\models\\Venda' => __DIR__ . '/../..' . '/app/database/models/Venda.php',
+        'app\\traits\\Connection' => __DIR__ . '/../..' . '/app/traits/Connection.php',
+        'app\\traits\\Create' => __DIR__ . '/../..' . '/app/traits/Create.php',
+        'app\\traits\\Read' => __DIR__ . '/../..' . '/app/traits/Read.php',
+        'app\\traits\\Template' => __DIR__ . '/../..' . '/app/traits/Template.php',
+        'app\\traits\\Update' => __DIR__ . '/../..' . '/app/traits/Update.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit0e330a870fc412f4adf1ce858bebcb9f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit0e330a870fc412f4adf1ce858bebcb9f::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit0e330a870fc412f4adf1ce858bebcb9f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit18fa088d68fd954b4ea5726a594f6291::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit18fa088d68fd954b4ea5726a594f6291::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit18fa088d68fd954b4ea5726a594f6291::$classMap;
 
         }, null, ClassLoader::class);
     }

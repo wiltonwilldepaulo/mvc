@@ -1,0 +1,109 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="{{home}}" class="brand-link">
+        <img src="{{empresa.icone}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">
+            {% if empresa.nome_fantasia is defined %}
+            {{ 'Empresa' }}
+            {% else %}
+            {{ empresa.nome_fantasia }}
+            {% endif %}
+        </span>
+    </a>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="{{usuario.foto_perfil}}" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="perfil?id={{usuario.id}}" class="d-block">{{usuario.nome_usuario }}</a>
+            </div>
+        </div>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-plus"></i>
+                        <p>
+                            Cadastros
+                            <i class="fas fa-lg fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/UI/general.html" class="nav-link">
+                                <i class="fa-solid fa-user-group"></i>
+                                <p>Cliente</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="listaproduto" class="nav-link">
+                                <i class="fa-solid fa-box-open"> </i>
+                                <p>Produto</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="pages/UI/buttons.html" class="nav-link">
+                                <i class="fa-solid fa-file-contract"> </i>
+                                <p>Contratos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{home}}/listausuario" class="nav-link">
+                                <i class="fa-solid fa-user"> </i>
+                                <p>Usuários</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{home}}/listaproprio" class="nav-link">
+                                <i class="fa-solid fa-user-tie"> </i>
+                                <p>Próprio</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-wallet"></i>
+                        <p>
+                            Fiscal
+                            <i class="fas fa-lg fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="listancm" class="nav-link">
+                                <i class="fa-solid fa-comment-dollar"></i>
+                                <p>NCM</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-wallet"></i>
+                        <p>
+                            Financeiro
+                            <i class="fas fa-lg fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/UI/general.html" class="nav-link">
+                                <i class="fa-solid fa-comment-dollar"></i>
+                                <p>Consta a receber</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
