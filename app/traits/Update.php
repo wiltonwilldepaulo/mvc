@@ -4,6 +4,7 @@ namespace app\traits;
 
 use PDO;
 use PDOException;
+use Slim\Psr7\UploadedFile;
 
 trait Update
 {

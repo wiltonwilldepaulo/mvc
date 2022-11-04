@@ -1,9 +1,26 @@
 <?php
 
-use Slim\Factory\AppFactory;
+
+//use Slim\Factory\AppFactory;
+
+use app\database\models\Posts;
 
 require "../vendor/autoload.php";
-$app = AppFactory::create();
+
+$posts = new Posts();
+$fieldAndValues = [
+    "fields" => [
+        "titulo" => "teste",
+        "post" => "teste2"
+    ],
+    "where" => [
+        "id" => "1"
+    ]
+];
+
+$posts->update($fieldAndValues);
+
+/*$app = AppFactory::create();
 $app->addRoutingMiddleware();
 define("BASE_URL", $app->getBasePath());
 
@@ -12,4 +29,4 @@ require "../app/helpers/config.php";
 //INCLUIMOS TODAS AS ROTAS.
 require "../app/routes/site.php";
 //RUM APP
-$app->run();
+$app->run();*/
