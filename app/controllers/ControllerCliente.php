@@ -11,8 +11,10 @@ class ControllerCliente extends Base
     {
         $this->cliente = new Cliente();
     }
+
     public function listacliente($request, $response)
     {
+        //Declaramos uma variavel para armazenar a lista de clientes.    
         $clientes = $this->cliente->find();
         //RETORNAMOS A VIEW 
         return $this->getTwig()->render(
@@ -21,7 +23,6 @@ class ControllerCliente extends Base
             [
                 "clientes" => $clientes,
                 "lista" => HOME,
-                "base_url" => BASE_URL,
                 "descricao_label" => "Listagem de clientes"
             ]
         );
